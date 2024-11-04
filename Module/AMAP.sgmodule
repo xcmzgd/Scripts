@@ -3,9 +3,11 @@
 #!author = RuCu6、kokoryh
 
 [Body Rewrite]
-http-response-jq ^https:\/\/m5\.amap\.com\/ws\/shield\/search_business\/process\/marketingOperationStructured\? 'delpaths([["data","tipsOperationLocation"]])'
+http-response-jq ^https:\/\/m5\.amap\.com\/ws\/shield\/search_business\/process\/marketingOperationStructured\? 'delpaths([["data","commonMaterial"]])'
 
-http-response-jq ^https:\/\/m5\.amap\.com\/ws\/shield\/search_business\/process\/marketingOperationStructured\? 'delpaths([["obj","data","resourcePlacement"]])'
+http-response-jq ^https:\/\/m5\.amap\.com\/ws\/shield\/search_business\/process\/marketingOperationStructured\? 'delpaths([["data","resourcePlacement"]])'
+
+http-response-jq ^https:\/\/m5\.amap\.com\/ws\/shield\/search_business\/process\/marketingOperationStructured\? 'delpaths([["data","tipsOperationLocation"]])'
 
 http-response-jq ^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/homepage\? 'delpaths([["history_tags"]])'
 
