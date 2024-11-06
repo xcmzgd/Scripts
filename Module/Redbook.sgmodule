@@ -26,7 +26,7 @@ http-response-jq ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/search\/trend
 ^https:\/\/www\.xiaohongshu\.com\/api\/sns\/(?:v1\/ads\/resource|v2\/hey\/\w+\/hey_gallery) data-type=text data="{}" status-code=200
 
 [Script]
-小红书 = type=http-response,pattern=^https:\/\/(?:edith|www)\.xiaohongshu\.com\/api\/sns\/(?:v4\/note\/videofeed|v10\/note\/video\/save),script-path=https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/Scripts/Redbook/Redbook.js,requires-body=true,timeout=30
+小红书 = type=http-response,pattern=^https:\/\/(?:edith|rec|www)\.xiaohongshu\.com\/api\/sns\/(?:v4\/note\/videofeed|v10\/note\/video\/save),script-path=https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/Scripts/Redbook/Redbook.js,requires-body=true,timeout=30
 
 小红书 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/(?:v2\/note\/feed|v3\/note\/videofeed),script-path=https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/Scripts/Redbook/Redbook.js,requires-body=true,timeout=30
 
