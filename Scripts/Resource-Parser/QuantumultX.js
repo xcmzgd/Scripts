@@ -14,9 +14,23 @@ let [link0, content0, subinfo] = [$resource.link, $resource.content, $resource.i
 let version = typeof $environment != "undefined" ? Number($environment.version.split("build")[1]): 0 // 版本号
 let Perror = 0 //错误类型
 
+const ADDRes = `quantumult-x:///add-resource?remote-resource=url-encoded-json`
+var RLink0 = {
+  "filter_remote": [],
+  "rewrite_remote": [],
+  "server_remote": [],
+}
+const Field = {
+  "filter" : "filter_remote",
+  "rewrite": "rewrite_remote",
+  "server" : "server_remote"
+}  
+
 const subtag = typeof $resource.tag != "undefined" ? $resource.tag : "";
 ////// 非 raw 链接的沙雕情形
 content0 = content0.indexOf("DOCTYPE html") != -1 && link0.indexOf("github.com") != -1 ? ToRaw(content0) : content0 ;
+// loon插件链接
+content0 = link0.indexOf("nsloon.com/openloon/import?plugin=") != -1 ? ToLink(link0) : content0 ;
 //ends 正常使用部分，調試註釋此部分
 
 
@@ -43,17 +57,6 @@ const plink0 = {"open-url" : link0, "media-url": qxpng} // 跳转订阅链接
 
 if(version == 0) { $notify("⚠️ 请更新 Quantumult X 至最新商店版本\n","🚦 当前版本可能无法正常使用部分功能","\n👉 点击跳转商店链接更新",update_link) }
 
-const ADDRes = `quantumult-x:///add-resource?remote-resource=url-encoded-json`
-var RLink0 = {
-  "filter_remote": [],
-  "rewrite_remote": [],
-  "server_remote": [],
-}
-const Field = {
-  "filter" : "filter_remote",
-  "rewrite": "rewrite_remote",
-  "server" : "server_remote"
-}  
 
 
 SubFlow() //流量通知
@@ -214,7 +217,7 @@ var flag = 1
 function Parser() {
   type0 = Type_Check(content0); //  类型判断
   //$notify(type0)
-  if (type0 != "web" && type0 != "wrong-field" && type0 != "JS-0"){
+  if (type0 != "web" && type0 != "wrong-field" && type0 != "JS-0" && type0 != "wrong-link"){
     try {
       //$notify(type0,"hh")
       if (Pdbg){
@@ -570,7 +573,10 @@ function Type_Check(subs) {
     } else if (typeQ =="server" && subs.length>100) { // 一些未知的b64 encode server case
       typec="server-b64-unknown"
       type = (typeQ == "unsupported" || typeQ =="server")? "Subs-B64Encode":"wrong-field"
-    } //else if (typeQ == "URI")
+    } else if(subs == "wrong-link") {
+      type="wrong-link"
+    }
+    //else if (typeQ == "URI")
   // 用于通知判断类型，debug
   if(typeU == "X"){
     $notify("该链接判定类型",type+" : " +typec, subs)
@@ -833,6 +839,18 @@ function ToRaw(cnt) {
     $notify( "⚠️⚠️ 解析该资源" + " ⟦" + subtag + "⟧ 失败" , "🚥 你的链接似乎是目录，而不是文件" , "❌ 你的链接："+link0, {"open-url":link0})
   }
   return cnt
+}
+
+function ToLink(link) {
+  cnt = link.split("nsloon.com/openloon/import?plugin=")[1]
+  if (cnt) {
+    
+    typ=$resource.type
+    RLink0[Field[typ]].push(cnt+", opt-parser=true, tag=🉑️长点❤️8⃣️") //  跳转URI-Scheme
+    flink = ADDRes.replace(/url-encoded-json/,encodeURIComponent(JSON.stringify(RLink0)))
+    $notify( "⚠️ 请点击通知跳转尝试添加正确链接" , "🚥 请正确使用原始链接" , "❌ 你的链接："+link0+"\n✅ 正确链接："+cnt, {"open-url":flink})
+  } 
+  return "wrong-link"
 }
 
 function CDN(cnt) {
