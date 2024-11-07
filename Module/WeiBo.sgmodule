@@ -1,6 +1,6 @@
-#!name = 微博与微博国际版
-#!desc = 微博与微博国际版去广告
-#!author = RuCu6、zmqcherish、keywos、kokoryh
+#!name = 微博
+#!desc = 微博去广告
+#!author = RuCu6、zmqcherish
 
 [Map Local]
 ^https:\/\/api\.weibo\.cn\/!\/sug\/list\/finderchange\? data-type=text data="{}" status-code=200
@@ -36,10 +36,6 @@
 ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(?:get-lbs-cell-info\.php|sdkconfig\.php) data-type=text data="{}" status-code=200
 
 ^https:\/\/weibo\.com\/ttarticle\/x\/m\/aj\/(?:reward|uvead) data-type=text data="{}" status-code=200
-
-^https?:\/\/api\.weibo\.cn\/\d\/(cardlist\?v_f=\d|ad\/weibointl\?) data-type=text data="{}" status-code=200
-
-^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=hot_search_users data-type=text data="{}" status-code=200
 
 [Script]
 微博 = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/!\/huati\/discovery_home_bottom_channels\?,script-path=https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/Scripts/WeiBo/WeiBo.js,requires-body=true,timeout=30
@@ -81,12 +77,6 @@
 微博 = type=http-response,pattern=^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php,script-path=https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/Scripts/WeiBo/WeiBo.js,requires-body=true,timeout=30
 
 微博 = type=http-response,pattern=^https:\/\/wbapp\.uve\.weibo\.com\/(?:preload\/get_ad|wbapplua\/wbpullad\.lua),script-path=https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/Scripts/WeiBo/WeiBo.js,requires-body=true,timeout=30
-
-微博 = type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?(ct=(feed&a=trends|user&a=get_searching_info)|a=(get_coopen_ads|user_center|search_topic|open_app&auth|icon_center)),script-path=https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/Scripts/WeiBo/WeiBoIntl.js,requires-body=true,timeout=30
-
-微博 = type=http-response,pattern=^https?:\/\/api\.weibo\.cn\/\d\/statuses\/.*timeline,script-path=https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/Scripts/WeiBo/WeiBoIntl,requires-body=true,timeout=30
-
-微博 = type=http-response,pattern=^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php,script-path=https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/Scripts/WeiBo/WeiBoIntl.js,requires-body=true,timeout=30
 
 [MITM]
 hostname = %APPEND% *.weibo.cn, *.weibo.com, weibo.com
