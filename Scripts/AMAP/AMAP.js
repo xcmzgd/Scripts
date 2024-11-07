@@ -13,6 +13,10 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     // 公交出行 底部卡路里数值
     obj.data.common_data.bus_plan_bottom_event.data = [];
   }
+  // 公交出行 底部营商推广
+  if (obj?.data?.common_data?.bus_plan_bottom_tips?.data?.length > 0) {
+    obj.data.common_data.bus_plan_bottom_tips.data = [];
+  }
   if (obj?.data?.common_data?.bus_plan_segment_event?.data?.length > 0) {
     // 公交出行 中转站 卡路里数值
     obj.data.common_data.bus_plan_segment_event.data = [];
@@ -370,6 +374,7 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     "platformCustomerComplianceInfo", // 保险公司信息
     "poiDetailBottomBarOperation",
     "poiDetailCommonConfig",
+    "poiDetailNewBeltV2", // 金秋出行 横幅
     "poiDetailWaterFeed", // 附近景点瀑布流 新
     "poiDetailWaterFeedTitle", // 更多人气好去处 新
     "poster_banner",
