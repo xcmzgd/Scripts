@@ -1,5 +1,5 @@
 # 规则名称: GlobalMediaMax
-# 规则统计: 2232
+# 规则统计: 2231
 
 DOMAIN,akmcdnoversea-tw.inter.ptqy.gitv.tv
 DOMAIN,api.okzy.tv
@@ -1284,7 +1284,6 @@ DOMAIN-SUFFIX,zeetv.com
 DOMAIN-SUFFIX,zeeuk.com
 DOMAIN-SUFFIX,zeriamerikes.com
 DOMAIN-SUFFIX,zype.com
-DOMAIN-KEYWORD,-spotify-
 DOMAIN-KEYWORD,abematv.akamaized.net
 DOMAIN-KEYWORD,apiproxy-device-prod-nlb-
 DOMAIN-KEYWORD,avoddashs
@@ -1302,7 +1301,7 @@ DOMAIN-KEYWORD,nivod
 DOMAIN-KEYWORD,nowtv100
 DOMAIN-KEYWORD,olevod
 DOMAIN-KEYWORD,rthklive
-DOMAIN-KEYWORD,spotify.com
+DOMAIN-KEYWORD,spotify
 DOMAIN-KEYWORD,tiktokcdn
 DOMAIN-KEYWORD,ttvnw
 DOMAIN-KEYWORD,tvbanywhere
