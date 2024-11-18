@@ -1,5 +1,5 @@
 # 规则名称:Advertising
-# 规则统计:117559
+# 规则统计:117561
 
 payload:
   - '+.0.101tubeporn.com'
@@ -12634,6 +12634,7 @@ payload:
   - '+.ao.jsitel.com'
   - '+.ao.pioncomm.net'
   - '+.ao.tolydigital.net'
+  - '+.ao1118kas.top'
   - '+.aoakss.com'
   - '+.aoalmfwinbsstec23.com'
   - '+.aoao11111iis.top'
@@ -18140,7 +18141,6 @@ payload:
   - '+.blablacam.fr'
   - '+.black-bricks.net'
   - '+.black-files.com'
-  - '+.black.qimo.ink'
   - '+.black6adv.com'
   - '+.blackabdo.company.site'
   - '+.blackandwhite-temporary.com'
@@ -65971,6 +65971,7 @@ payload:
   - '+.mhvllvgrefplg.com'
   - '+.mhwbhn.tohapi.fr'
   - '+.mhwpwcj.com'
+  - '+.mhwy6.icu'
   - '+.mhysbwo.xyz'
   - '+.mhzftye.xyz'
   - '+.mi-de-ner-nis3.info'
@@ -108005,6 +108006,7 @@ payload:
   - '+.uwavoptig.com'
   - '+.uwaxoyfklhm.com'
   - '+.uwdzbo.tgw.com'
+  - '+.uweisit.top'
   - '+.uweriot.top'
   - '+.uwerpyh.cn'
   - '+.uwfcqtdb.xyz'
