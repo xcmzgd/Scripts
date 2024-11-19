@@ -1,5 +1,5 @@
 # 规则名称: ChinaIPBGP
-# 规则统计: 4175
+# 规则统计: 4179
 
 IP-CIDR,1.1.8.0/24,no-resolve
 IP-CIDR,1.116.0.0/15,no-resolve
@@ -247,8 +247,9 @@ IP-CIDR,103.143.238.0/24,no-resolve
 IP-CIDR,103.143.92.0/23,no-resolve
 IP-CIDR,103.144.148.0/23,no-resolve
 IP-CIDR,103.144.158.0/23,no-resolve
+IP-CIDR,103.144.2.0/23,no-resolve
 IP-CIDR,103.144.245.0/24,no-resolve
-IP-CIDR,103.144.246.0/24,no-resolve
+IP-CIDR,103.144.246.0/23,no-resolve
 IP-CIDR,103.144.28.0/24,no-resolve
 IP-CIDR,103.144.66.0/23,no-resolve
 IP-CIDR,103.144.70.0/24,no-resolve
@@ -387,6 +388,7 @@ IP-CIDR,103.215.80.0/22,no-resolve
 IP-CIDR,103.216.152.0/22,no-resolve
 IP-CIDR,103.216.252.0/23,no-resolve
 IP-CIDR,103.216.4.0/22,no-resolve
+IP-CIDR,103.216.40.0/22,no-resolve
 IP-CIDR,103.218.216.0/22,no-resolve
 IP-CIDR,103.219.100.0/22,no-resolve
 IP-CIDR,103.219.184.0/22,no-resolve
@@ -1814,6 +1816,7 @@ IP-CIDR,123.254.96.0/20,no-resolve
 IP-CIDR,123.4.0.0/14,no-resolve
 IP-CIDR,123.49.192.0/23,no-resolve
 IP-CIDR,123.49.195.0/24,no-resolve
+IP-CIDR,123.49.196.0/24,no-resolve
 IP-CIDR,123.49.240.0/22,no-resolve
 IP-CIDR,123.49.245.0/24,no-resolve
 IP-CIDR,123.52.0.0/14,no-resolve
@@ -1931,7 +1934,7 @@ IP-CIDR,125.171.0.0/16,no-resolve
 IP-CIDR,125.208.0.0/20,no-resolve
 IP-CIDR,125.208.24.0/21,no-resolve
 IP-CIDR,125.208.32.0/24,no-resolve
-IP-CIDR,125.208.35.0/24,no-resolve
+IP-CIDR,125.208.34.0/23,no-resolve
 IP-CIDR,125.208.37.0/24,no-resolve
 IP-CIDR,125.208.40.0/24,no-resolve
 IP-CIDR,125.208.42.0/24,no-resolve
@@ -2141,7 +2144,6 @@ IP-CIDR,154.205.84.0/23,no-resolve
 IP-CIDR,154.205.87.0/24,no-resolve
 IP-CIDR,154.205.88.0/21,no-resolve
 IP-CIDR,154.205.96.0/20,no-resolve
-IP-CIDR,154.223.96.0/19,no-resolve
 IP-CIDR,154.23.188.0/22,no-resolve
 IP-CIDR,154.8.128.0/17,no-resolve
 IP-CIDR,154.8.48.0/20,no-resolve
@@ -2160,6 +2162,7 @@ IP-CIDR,156.232.13.0/24,no-resolve
 IP-CIDR,156.232.9.0/24,no-resolve
 IP-CIDR,156.236.119.0/24,no-resolve
 IP-CIDR,156.239.0.0/20,no-resolve
+IP-CIDR,156.239.224.0/19,no-resolve
 IP-CIDR,156.239.96.0/19,no-resolve
 IP-CIDR,156.247.12.0/23,no-resolve
 IP-CIDR,156.247.14.0/24,no-resolve
@@ -2331,6 +2334,7 @@ IP-CIDR,180.96.0.0/11,no-resolve
 IP-CIDR,182.128.0.0/12,no-resolve
 IP-CIDR,182.144.0.0/13,no-resolve
 IP-CIDR,182.157.0.0/16,no-resolve
+IP-CIDR,182.160.65.0/24,no-resolve
 IP-CIDR,182.174.0.0/15,no-resolve
 IP-CIDR,182.18.32.0/19,no-resolve
 IP-CIDR,182.18.5.0/24,no-resolve
